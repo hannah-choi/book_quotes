@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Ramaraja&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('reset.css');
+@import url('edit.css');
+
+
+body{
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c4c4c4;
+    font-size: 0.8rem;
+    
+}
+
+
+
+    .frame{
+        width:750px;
+        padding:50px 50px 70px 50px;
+        background-color: white;
+    }
+
+    .frame input[type="text"]{
+        display: block;
+    }
+
+    .frame header.book_header{
+        width:420px;
+        display: flex;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+
+
+    .frame header span{
+        display: block;
+        margin-bottom: 0.1rem;
+    }
+
+    .frame header span.description{
+        font-family:  'Ramaraja', serif;
+        font-size: 1.1rem;
+    }
+
+    .capsmallfont{
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .frame h1{
+        margin-bottom: 100px;
+    }
+
+    .frame section.book_body{
+        line-height: 1.5;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .frame section.book_body,
+    .frame section.like{
+            margin-left: 295px;
+    }
+
+    .frame button.delete{
+        position: absolute;
+        right:0;
+        bottom:0;
+    }
+
+    .frame button.edit{
+        position: absolute;
+        right:100px;
+        bottom:0;
+    }
+
+    .frame section.like{
+        width:120px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        
+    }
+
+    .frame section.like i{
+        font-size: 1rem;
+        margin-right: 0.8rem;
+        color:#E64732;
+    }
+
+    h1{
+        font-family:  'Ramaraja', serif;
+        font-size: 6rem;
+        line-height: 1;
+        
+    }
+
+    h4{
+        font-family:  'Ramaraja', serif;
+        font-size: 2rem;
+    }
+
+
+    button.delete{
+        background-color: gray;
+    }
+
+    button{
+        padding:0.8rem 1.5rem;
+        outline: none;
+        border:none;
+        background-color:black;
+        color:white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        font-family: inherit;
+        font-family: 'Lato', sans-serif;
+    }
+
+    button:hover{
+        background-color: #E64732;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    .frame textarea.book_contents{
+        width:100%;
+        min-height:300px;
+        font-family: inherit;
+        font-size:1rem;
+    }
+
+
+
+    @media (min-width: 320px) and (max-width: 767px) {
+
+        body{
+            font-size: 0.9rem;
+        }
+
+        h1{
+            font-size: 5rem;
+        }
+
+
+        .frame{
+            width:95vw;
+            background-color: white;
+            word-wrap: break-word;
+        }
+    
+
+        .frame header{
+            width:100%;
+        }
+
+    .frame section.book_body,
+    .frame section.like{
+            margin-left: 0;
+    }
+        
+    .frame header.book_header{
+        width:100%;
+        display: flex;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+    
+      
+    }
+
+    

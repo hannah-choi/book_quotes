@@ -1,0 +1,12 @@
+
+.frame input.booktitle{
+    font-family:  'Ramaraja', serif;
+    font-size: 5rem;
+    width:100%;
+}
+
+
+.frame header.book_write_header{
+    width:420px;
+    margin-bottom: 60px;
+}
