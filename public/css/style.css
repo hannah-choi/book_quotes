@@ -71,6 +71,7 @@ body{
         bottom:0;
     }
 
+    .frame input[type="submit"],
     .frame button.edit{
         position: absolute;
         right:100px;
@@ -110,6 +111,7 @@ body{
         background-color: gray;
     }
 
+    input[type="submit"],
     button{
         padding:0.8rem 1.5rem;
         outline: none;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Quotes</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e8a278aa48.js" crossorigin="anonymous"></script>
+    <script src ="js/create.js" async="defer"></script>
+</head>
+
+<body>
+
+    <div class="frame">
+        <form action="/create" method="post">
+        <header class="book_write_header">
+            <h4>New Post</h4>
+            <input type="text" class="booktitle" name="booktitle" placeholder="Booktitle">
+            <input type="text" class="author" name="author" placeholder="AUTHOR">
+        </header>
+        <section class="book_write">
+            <textarea class="book_contents" name="book_contents"></textarea>
+        </section>
+        <input type="submit" value="submit">
+        <a href="/delete"><button class="delete">DELETE</button></a>
+        </form>
+    </div>
+
+</body>
+
+</html>
