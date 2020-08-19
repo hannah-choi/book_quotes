@@ -17,7 +17,7 @@ router.post('/create',function(req,res){
     if (err) throw err;
     res.redirect('/')
   });}
-  else {
+  else { //db에 들어가는 것 막기
     res.redirect('/create')
   }
 })

@@ -12,12 +12,12 @@ const bookContents = form.book_contents.value;
 // }
 
 form.addEventListener('submit', ()=>{
-    if(bookTitle && author && bookContents){
+    if(bookTitle && author && bookContents){ //값이 모두 있는 경우에만 submit
         alert('successfully posted!');
         return true;        
     } 
     else {
-        alert(`Type required fields`);
+        alert(`Type required fields`); //값이 없는 경우 오류메세지 alert
         return false;
 }
 }
