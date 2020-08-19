@@ -12,17 +12,14 @@ router.get('/create',function(req,res){
 })
 
 router.post('/create',function(req,res){
-  if(req.body.author||req.body.booktitle||req.body.book_contents){
+  if(req.body.author && req.body.booktitle && req.body.book_contents){
   connection.query(`insert into bookquotes(author,title,contents) values('${req.body.author}','${req.body.booktitle}','${req.body.book_contents}')`, function(err, rows, fields) {
     if (err) throw err;
     res.redirect('/')
   });}
-
-  else{
-    //res.send(`<html><body><script>alert('type author')</script></body><html>`);
-    //res.redirect('/create');
-  } 
-  
+  else {
+    res.redirect('/create')
+  }
 })
 
 module.exports = router;
