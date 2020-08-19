@@ -7,12 +7,15 @@
 body{
     font-family: 'Karla', sans-serif;
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     background-color: #c4c4c4;
     font-size: 0.8rem;
+    padding-top: 4rem;
     
 }
+
 
 
 
@@ -20,6 +23,7 @@ body{
         width:750px;
         padding:50px 50px 70px 50px;
         background-color: white;
+        margin-bottom: 3rem;
     }
 
     .frame input[type="text"]{
@@ -65,13 +69,13 @@ body{
             margin-left: 295px;
     }
 
+    .frame button.cancel,
     .frame button.delete{
         position: absolute;
         right:0;
         bottom:0;
     }
 
-    .frame input[type="submit"],
     .frame button.edit{
         position: absolute;
         right:100px;
@@ -106,10 +110,12 @@ body{
         font-size: 2rem;
     }
 
-
+    button.cancel,
     button.delete{
         background-color: gray;
     }
+
+
 
     input[type="submit"],
     button{
@@ -123,10 +129,23 @@ body{
         font-size: 0.8rem;
         font-family: inherit;
         font-family: 'Lato', sans-serif;
+        cursor: pointer;
     }
 
+
+
+    input[type="submit"]{
+        position: absolute;
+        padding:0.95rem 1.5rem;
+        right:105px;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
     button:hover{
         background-color: #E64732;
+        
     }
 
     input:focus{
@@ -140,6 +159,24 @@ body{
         font-size:1rem;
     }
 
+    a{
+        text-decoration:none;
+        color:inherit;
+    }
+
+
+    input.newPost{
+        font-family: Ramaraja;
+        padding: 1.2rem 3rem 0.8rem 3rem;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        outline: none;
+        border:none;
+        background-color:black;
+        color:white;
+        cursor: pointer;
+    }
 
 
     @media (min-width: 320px) and (max-width: 767px) {
