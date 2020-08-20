@@ -15,10 +15,6 @@ body{
     padding-top: 4rem;
     
 }
-
-
-
-
     .frame{
         width:750px;
         padding:50px 50px 70px 50px;
@@ -30,13 +26,26 @@ body{
         display: block;
     }
 
+    textarea{
+        outline: none;
+        border:none;
+        background-color: #eeeeee;
+    }
+
+/*----------------------------*/
+
     .frame header.book_header{
-        width:420px;
+        width:400px;
         display: flex;
         margin-bottom: 40px;
         justify-content: space-between;
     }
 
+    .frame header.book_write_header{
+        width:100%;
+    }
+
+/*----------------------------*/
 
     .frame header span{
         display: block;
@@ -52,6 +61,7 @@ body{
         letter-spacing: 2px;
         font-size: 0.75rem;
         font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
     }
 
     .frame h1{
@@ -61,7 +71,9 @@ body{
     .frame section.book_body{
         line-height: 1.5;
         font-size: 0.9rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+
+        overflow-x: auto;
     }
 
     .frame section.book_body,
@@ -69,14 +81,14 @@ body{
             margin-left: 295px;
     }
 
-    .frame button.cancel,
-    .frame button.delete{
+    a.cancel,
+    a.delete{
         position: absolute;
         right:0;
         bottom:0;
     }
 
-    .frame button.edit{
+    a.edit{
         position: absolute;
         right:100px;
         bottom:0;
@@ -110,15 +122,10 @@ body{
         font-size: 2rem;
     }
 
-    button.cancel,
-    button.delete{
-        background-color: gray;
-    }
-
 
 
     input[type="submit"],
-    button{
+    a.delete, a.edit{
         padding:0.8rem 1.5rem;
         outline: none;
         border:none;
@@ -133,11 +140,16 @@ body{
     }
 
 
+    a.cancel,
+    a.delete{
+        background-color: gray;
+    }
+
 
     input[type="submit"]{
         position: absolute;
-        padding:0.95rem 1.5rem;
-        right:105px;
+        padding:0.8rem 1.5rem;
+        right:110px;
         bottom: 0;
         cursor: pointer;
     }
@@ -148,6 +160,44 @@ body{
         
     }
 
+    /*----------------------------*/
+
+    section.book_write{
+        width:100%;
+    }
+
+    textarea.bookContents{
+        padding:20px;
+        width:100%;
+        min-height: 300px;
+        font-family: inherit;
+        font-size: 1rem;
+        overflow-y: scroll;
+        
+    }
+
+    input.bookTitle{
+        font-family: karla;
+        font-size: 4rem;
+        line-height: 0.5;
+        width:100%;
+        background-color: #eeeeee;
+        padding:10px;
+        
+    }
+
+    input.author{
+        margin-top:20px;
+        padding:10px;
+        min-width:350px;
+        font-size:1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: #eeeeee;
+    }
+
+/*----------------------------*/
+
     input:focus{
         outline: none;
     }
@@ -157,6 +207,7 @@ body{
         min-height:300px;
         font-family: inherit;
         font-size:1rem;
+        background-color: #eeeeee;
     }
 
     a{
@@ -165,7 +216,7 @@ body{
     }
 
 
-    input.newPost{
+    a.newPost{
         font-family: Ramaraja;
         padding: 1.2rem 3rem 0.8rem 3rem;
         font-size: 1.8rem;
@@ -179,6 +230,17 @@ body{
     }
 
 
+
+    pre {
+        white-space: pre-wrap;
+             white-space: -moz-pre-wrap;
+             white-space: -pre-wrap;
+             white-space: -o-pre-wrap;
+             word-wrap: break-word;
+        
+     }
+
+
     @media (min-width: 320px) and (max-width: 767px) {
 
         body{
@@ -186,14 +248,19 @@ body{
         }
 
         h1{
-            font-size: 5rem;
+            font-size: 4.8rem;
         }
 
 
+        a.newPost{
+            width:90vw;
+        }
+
         .frame{
-            width:95vw;
+            width:90vw;
             background-color: white;
             word-wrap: break-word;
+            padding:45px 45px 60px 45px;
         }
     
 
@@ -213,6 +280,13 @@ body{
         justify-content: space-between;
     }
     
+    input.bookTitle{
+        font-family: karla;
+        font-size: 3rem;
+        line-height: 1;
+        width:100%;
+    }
+
       
     }
 

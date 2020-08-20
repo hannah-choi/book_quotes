@@ -1,13 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/create"><input type="button"></a>
-    
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Quotes</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e8a278aa48.js" crossorigin="anonymous"></script>
+</head>
+
+<body>  
+
+    <a class="newPost" href="/create">Write a new post</a>
+
+    <% for(let i=0; i<rows.length; i++){%>
+
+    <div class="frame">
+        <header class="book_header">
+            <div class="author">
+                <span class="description">Author</span>
+                <span class="authorName capsmallfont"><%= rows[i].author %></span></div>
+            <div class="date">
+                <span class="description">Date</span>
+                <span class="date capsmallfont"><%= rows[i].date %></span></div>
+        </header>
+        <h1><%= rows[i].title %></h1>
+        <section class="book_body">
+          <pre><%= rows[i].contents %></pre>
+        </section>
+        <section class="like">
+            
+          <% if(rows[i].like==1){%>
+            <a href="/likeupdate?id=<%=rows[i].id%>&like=0"><i class="fas fa-heart"></i></a>
+          <%} else {%>
+            <a href="/likeupdate?id=<%=rows[i].id%>&like=1"><i class="far fa-heart"></i></a>
+          <%}%>
+          
+        </section>
+       <a class="edit" href="/update?id=<%=rows[i].id%>">EDIT</a><a class="delete" href="/delete?id=<%=rows[i].id%>">DELETE</a>
+    </div>
+  <%}%>
+
+</body>
+
 </html>

@@ -1,8 +1,8 @@
 const form = document.querySelector('form')
 
-// const bookTitle = form.booktitle.value;
+// const bookTitle = form.bookTitle.value;
 // const author = form.author.value;
-// const bookContents = form.book_contents.value;
+// const bookContents = form.bookContents.value;
 
 // function returnFalse(){
 //     if(!bookTitle||!author||!bookTitle){
@@ -12,9 +12,9 @@ const form = document.querySelector('form')
 // }
 
 form.addEventListener('submit', (e)=>{
-    const bookTitle = form.booktitle.value;
+    const bookTitle = form.bookTitle.value;
     const author = form.author.value;
-    const bookContents = form.book_contents.value;
+    const bookContents = form.bookContents.value;
 
     console.log(bookTitle, author, bookContents)
     if(!bookTitle || !author || !bookContents){ 
