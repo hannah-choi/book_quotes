@@ -46,10 +46,11 @@ router.post('/update', function(req,res){
 })
 })
 
-router.get('/likeupdate',function(req,res){
+router.post('/likeupdate',function(req,res){
   const like = req.query.like;
   connection.query(`UPDATE bookquotes SET \`like\`= ${like} WHERE id =${req.query.id}`,(err,rows,fields)=>{
     if (err) throw err;
+    res.sendStatus(200);
   })
 })
 
