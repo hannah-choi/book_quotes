@@ -3,6 +3,8 @@ var router = express.Router();
 const connection = require('../bin/db.js');
 const { rollback } = require('../bin/db.js');
 
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   connection.query(`SELECT id, author, title, contents, \`like\`, date_format(date, '%d %b, %Y') AS date from bookquotes ORDER BY id DESC;`, (err,rows,fields)=>{
@@ -27,7 +29,7 @@ router.post('/create',function(req,res){
 })
 
 router.get('/update',function(req,res){
-  connection.query(`SELECT * FROM bookquotes where ID = ${req.query.id}`, (err,rows,fields)=>{
+  connection.query(`SELECT * FROM bookquotes WHERE id = ${req.query.id}`, (err,rows,fields)=>{
     res.render('create',{ pageTitle: 'Update post',
                           action: '/update',
                           title: rows[0].title,
@@ -48,9 +50,9 @@ router.get('/likeupdate',function(req,res){
   const like = req.query.like;
   connection.query(`UPDATE bookquotes SET \`like\`= ${like} WHERE id =${req.query.id}`,(err,rows,fields)=>{
     if (err) throw err;
-    res.redirect('/')
   })
 })
+
 
 
 router.get('/delete',function(req,res){
