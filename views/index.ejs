@@ -34,15 +34,12 @@
           <pre><%= rows[i].contents %></pre>
         </section>
         <section class="like">
-        <form method = "post" id="changeLike">
-            <a href="/likeupdate?id=<%=rows[i].id%>&like=0"><i class="fas fa-heart" data-id="0" data-postid="<%=rows[i].id%>"></i></a>
-        </form>
+			<% if(rows[i].like==1){%>
+				<i class="fas fa-heart" data-like="0" data-postid="<%=rows[i].id%>"></i>
+			<%} else {%>
+				<i class="far fa-heart" data-like="1" data-postid="<%=rows[i].id%>"></i>
+			<%}%>
         </section>
-    	<% if(rows[i].like==1){%>
-        	<a href="/likeupdate?id=<%=rows[i].id%>&like=0"><i class="fas fa-heart" data-like="0" data-postid="<%=rows[i].id%>"></i></a>
-        <%} else {%>
-    		<a href="/likeupdate?id=<%=rows[i].id%>&like=1"><i class="far fa-heart" data-like="1" data-postid="<%=rows[i].id%>"></i></a>
-        <%}%>
     </div>
   <%}%>
 

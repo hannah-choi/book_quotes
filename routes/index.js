@@ -46,8 +46,11 @@ router.post('/update', function(req,res){
 })
 })
 
-router.post('/likeupdate',function(req,res){
+//post: insert하거나, 노출되는 안되는 정보 전달시
+router.get('/likeupdate',function(req,res){
   const like = req.query.like;
+  console.log(req.query);
+  console.log(`UPDATE bookquotes SET \`like\`= ${like} WHERE id =${req.query.id}`)
   connection.query(`UPDATE bookquotes SET \`like\`= ${like} WHERE id =${req.query.id}`,(err,rows,fields)=>{
     if (err) throw err;
     res.sendStatus(200);
