@@ -1,12 +1,10 @@
 $(document).ready(function(){
     $('.fa-heart').on('click', function(e){
-        // e.preventDefault();
         const postid = $(this).data('postid');
-        let like = $(this).data('like');
-
+        let like = e.target.dataset.like;
+        
         $.ajax({
-        //   url:`/likeupdate?id=${postid}&like=${like}`,
-            url:`/likeupdate`,
+          url:`/likeupdate`,
           method:'get',
           data:{
             like:like,

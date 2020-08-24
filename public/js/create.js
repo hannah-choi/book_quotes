@@ -1,16 +1,5 @@
 const form = document.querySelector('form')
 
-// const bookTitle = form.bookTitle.value;
-// const author = form.author.value;
-// const bookContents = form.bookContents.value;
-
-// function returnFalse(){
-//     if(!bookTitle||!author||!bookTitle){
-//         alert(`Type required fields`);
-//         return false;
-//     }
-// }
-
 form.addEventListener('submit', (e)=>{
     const bookTitle = form.bookTitle.value;
     const author = form.author.value;
@@ -28,5 +17,3 @@ form.addEventListener('submit', (e)=>{
 }
 }
 );
-
-//input
