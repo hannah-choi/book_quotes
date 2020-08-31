@@ -1,0 +1,56 @@
+
+    section.book_write{
+        width:100%;
+    }
+
+    textarea.bookContents{
+        padding:20px;
+        width:100%;
+        min-height: 300px;
+        font-family: inherit;
+        font-size: 1rem;
+        overflow-y: scroll;
+        
+    }
+
+    input.bookTitle{
+        font-family: karla;
+        font-size: 4rem;
+        line-height: 0.5;
+        width:100%;
+        background-color: #eeeeee;
+        padding:10px;
+        
+    }
+
+    input.author{
+        margin-top:20px;
+        padding:10px;
+        min-width:350px;
+        font-size:1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: #eeeeee;
+    }
+
+
+
+    .frame textarea.book_contents{
+        width:100%;
+        min-height:300px;
+        font-family: inherit;
+        font-size:1rem;
+        background-color: #eeeeee;
+    }
+
+
+    .frame header.book_header{
+        width:400px;
+        display: flex;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+
+    .frame header.book_write_header{
+        width:100%;
+    }
