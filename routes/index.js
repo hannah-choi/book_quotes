@@ -4,10 +4,10 @@ const connection = require('../bin/db.js');
 const { rollback } = require('../bin/db.js');
 
 router.get('/', function(req, res, next) {
-  connection.query(`SELECT id, author, title, contents, \`like\`, date_format(date, '%d %b, %Y') AS date from bookquotes ORDER BY id DESC;`, (err,rows,fields)=>{
-  res.render('index', {rows:rows});
-})
-});
+	connection.query(`SELECT id, author, title, contents, \`like\`, date_format(date, '%d %b, %Y') AS date from bookquotes ORDER BY id DESC;`, (err,rows,fields)=>{
+	  res.render('index', {rows:rows});
+	})
+  });
 
 router.get('/create',function(req,res){
   res.render('create',{ 
