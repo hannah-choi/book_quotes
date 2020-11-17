@@ -49,7 +49,7 @@ textarea {
     text-transform: uppercase;
 }
 
-div.title {
+h1.title {
     margin-bottom: 100px;
     width: 55%;
     /* border: 1px solid khaki; */

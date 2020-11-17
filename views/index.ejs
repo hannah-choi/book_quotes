@@ -29,7 +29,7 @@
                 <span class="description">Date</span>
                 <span class="date capsmallfont"><%= rows[i].date %></span></div>
         </header>
-        <div class="title"><h1><%= rows[i].title %></h1></div>
+        <h1 class="title"><%= rows[i].title %></h1>
         <section class="book_body">
           <pre><%= rows[i].contents %></pre>
         </section>
@@ -40,6 +40,7 @@
 				<i class="far fa-heart" data-like="1" data-postid="<%=rows[i].id%>"></i>
 			<%}%>
         </section>
+        <a class="edit" href= '/update?id=<%=i%>'>update</a><a class="delete" href="/delete?id=<%=i%>">delete</a>
     </div>
   <%}%>
 
