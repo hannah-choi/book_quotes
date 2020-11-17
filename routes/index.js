@@ -3,13 +3,13 @@ var router = express.Router();
 const connection = require('../bin/db.js');
 
 router.get('/', function(req, res, next) {
-  connection.query(`SELECT id, author, title, contents, \`like\`, date_format(date, '%d %b, %Y') AS date from bookquotes ORDER BY id DESC;`, (err,rows,fields)=>{
-    res.render('index', {rows:rows});
-  })
-});
+	connection.query(`SELECT id, author, title, contents, \`like\`, date_format(date, '%d %b, %Y') AS date from bookquotes ORDER BY id DESC;`, (err,rows,fields)=>{
+	  res.render('index', {rows:rows});
+	})
+  });
 
 router.get('/create',function(req,res){
-	res.render('create',{ 
+  res.render('create',{ 
 		pageTitle: 'Write new post',
         action: '/create',
         title: '',
@@ -21,14 +21,14 @@ router.get('/create',function(req,res){
 
 router.post('/create',function(req,res){
   connection.query(`INSERT INTO bookquotes(author,title,contents) VALUES('${req.body.author}','${req.body.bookTitle}','${req.body.bookContents}')`, function(err, rows, fields) {
-	if (err) throw err;
-	res.redirect('/')
-  	});
+    if (err) throw err;
+    res.redirect('/')
+      });  
 })
 
 router.get('/update',function(req,res){
-  connection.query(`SELECT * FROM bookquotes WHERE id = ${req.query.id}`, (err,rows,fields)=>{
-    res.render('create',{ 
+  connection.query(`SELECT * FROM bookquotes WHERE ID = ${req.query.id}`, (err,rows,fields)=>{
+	res.render('create',{ 
 		pageTitle: 'Update post',
         action: '/update',
         title: rows[0].title,
