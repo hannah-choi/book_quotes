@@ -1,293 +1,274 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Ramaraja&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-@import url('reset.css');
-@import url('edit.css');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Ramaraja&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import url("reset.css");
+@import url("edit.css");
 
-
-body{
-    font-family: 'Karla', sans-serif;
+body {
+    font-family: "Karla", sans-serif;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    background-color: #c4c4c4;
+    background: url("./bg.jpg") no-repeat fixed center;
     font-size: 0.8rem;
     padding-top: 4rem;
-    
 }
-    .frame{
-        width:750px;
-        padding:50px 50px 70px 50px;
+.frame {
+    width: 750px;
+    padding: 50px 50px 70px 50px;
+    background-color: white;
+    margin-bottom: 3rem;
+}
+
+.frame input[type="text"] {
+    display: block;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    background-color: #eeeeee;
+}
+
+/*----------------------------*/
+
+.frame header.book_header {
+    width: 400px;
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+.frame header.book_write_header {
+    width: 100%;
+}
+
+/*----------------------------*/
+
+.frame header span {
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+.frame header span.description {
+    font-family: "Ramaraja", serif;
+    font-size: 1.1rem;
+}
+
+.capsmallfont {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+}
+
+.frame h1 {
+    margin-bottom: 100px;
+}
+
+.frame section.book_body {
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+
+    overflow-x: auto;
+}
+
+.frame section.book_body,
+.frame section.like {
+    margin-left: 295px;
+}
+
+a.cancel,
+a.delete {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+a.edit {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+}
+
+.frame section.like {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.frame section.like i {
+    font-size: 1rem;
+    margin-right: 0.8rem;
+    color: #5c85a6;
+}
+
+h1 {
+    font-family: "Ramaraja", serif;
+    font-size: 6rem;
+    line-height: 1;
+}
+
+h4 {
+    font-family: "Ramaraja", serif;
+    font-size: 2rem;
+}
+
+input[type="submit"],
+a.delete,
+a.edit {
+    padding: 0.8rem 1.5rem;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+}
+
+a.cancel,
+a.delete {
+    background-color: #544349;
+}
+
+input[type="submit"] {
+    position: absolute;
+    padding: 0.8rem 1.5rem;
+    right: 110px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+a:hover,
+a.newPost:hover,
+input[type="submit"]:hover,
+button:hover {
+    background-color: #917768;
+    cursor: pointer;
+}
+
+/*----------------------------*/
+
+section.book_write {
+    width: 100%;
+}
+
+textarea.bookContents {
+    padding: 20px;
+    width: 100%;
+    min-height: 300px;
+    font-family: inherit;
+    font-size: 1rem;
+    overflow-y: scroll;
+}
+
+input.bookTitle {
+    font-family: karla;
+    font-size: 4rem;
+    line-height: 0.5;
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 10px;
+}
+
+input.author {
+    margin-top: 20px;
+    padding: 10px;
+    min-width: 350px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #eeeeee;
+}
+
+/*----------------------------*/
+
+input:focus {
+    outline: none;
+}
+
+.frame textarea.book_contents {
+    width: 100%;
+    min-height: 300px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #eeeeee;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.newPost {
+    font-family: Ramaraja;
+    padding: 1.2rem 3rem 0.8rem 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    a.newPost {
+        width: 90vw;
+    }
+
+    .frame {
+        width: 90vw;
         background-color: white;
-        margin-bottom: 3rem;
+        word-wrap: break-word;
+        padding: 45px 45px 60px 45px;
     }
 
-    .frame input[type="text"]{
-        display: block;
+    .frame header {
+        width: 100%;
     }
 
-    textarea{
-        outline: none;
-        border:none;
-        background-color: #eeeeee;
+    .frame section.book_body,
+    .frame section.like {
+        margin-left: 0;
     }
 
-/*----------------------------*/
-
-    .frame header.book_header{
-        width:400px;
+    .frame header.book_header {
+        width: 100%;
         display: flex;
         margin-bottom: 40px;
         justify-content: space-between;
     }
 
-    .frame header.book_write_header{
-        width:100%;
-    }
-
-/*----------------------------*/
-
-    .frame header span{
-        display: block;
-        margin-bottom: 0.1rem;
-    }
-
-    .frame header span.description{
-        font-family:  'Ramaraja', serif;
-        font-size: 1.1rem;
-    }
-
-    .capsmallfont{
-        letter-spacing: 2px;
-        font-size: 0.75rem;
-        font-family: 'Lato', sans-serif;
-        text-transform: uppercase;
-    }
-
-    .frame h1{
-        margin-bottom: 100px;
-    }
-
-    .frame section.book_body{
-        line-height: 1.5;
-        font-size: 0.9rem;
-        margin-bottom: 2rem;
-
-        overflow-x: auto;
-    }
-
-    .frame section.book_body,
-    .frame section.like{
-            margin-left: 295px;
-    }
-
-    a.cancel,
-    a.delete{
-        position: absolute;
-        right:0;
-        bottom:0;
-    }
-
-    a.edit{
-        position: absolute;
-        right:100px;
-        bottom:0;
-    }
-
-    .frame section.like{
-        width:120px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 2px;
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        
-    }
-
-    .frame section.like i{
-        font-size: 1rem;
-        margin-right: 0.8rem;
-        color:#E64732;
-    }
-
-    h1{
-        font-family:  'Ramaraja', serif;
-        font-size: 6rem;
-        line-height: 1;
-        
-    }
-
-    h4{
-        font-family:  'Ramaraja', serif;
-        font-size: 2rem;
-    }
-
-
-
-    input[type="submit"],
-    a.delete, a.edit{
-        padding:0.8rem 1.5rem;
-        outline: none;
-        border:none;
-        background-color:black;
-        color:white;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-        font-family: inherit;
-        font-family: 'Lato', sans-serif;
-        cursor: pointer;
-    }
-
-
-    a.cancel,
-    a.delete{
-        background-color: gray;
-    }
-
-
-    input[type="submit"]{
-        position: absolute;
-        padding:0.8rem 1.5rem;
-        right:110px;
-        bottom: 0;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:hover,
-    button:hover{
-        background-color: #E64732;
-        
-    }
-
-    /*----------------------------*/
-
-    section.book_write{
-        width:100%;
-    }
-
-    textarea.bookContents{
-        padding:20px;
-        width:100%;
-        min-height: 300px;
-        font-family: inherit;
-        font-size: 1rem;
-        overflow-y: scroll;
-        
-    }
-
-    input.bookTitle{
-        font-family: karla;
-        font-size: 4rem;
-        line-height: 0.5;
-        width:100%;
-        background-color: #eeeeee;
-        padding:10px;
-        
-    }
-
-    input.author{
-        margin-top:20px;
-        padding:10px;
-        min-width:350px;
-        font-size:1rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background-color: #eeeeee;
-    }
-
-/*----------------------------*/
-
-    input:focus{
-        outline: none;
-    }
-
-    .frame textarea.book_contents{
-        width:100%;
-        min-height:300px;
-        font-family: inherit;
-        font-size:1rem;
-        background-color: #eeeeee;
-    }
-
-    a{
-        text-decoration:none;
-        color:inherit;
-    }
-
-
-    a.newPost{
-        font-family: Ramaraja;
-        padding: 1.2rem 3rem 0.8rem 3rem;
-        font-size: 1.8rem;
-        text-align: center;
-        margin-bottom: 3rem;
-        outline: none;
-        border:none;
-        background-color:black;
-        color:white;
-        cursor: pointer;
-    }
-
-
-
-    pre {
-        white-space: pre-wrap;
-             white-space: -moz-pre-wrap;
-             white-space: -pre-wrap;
-             white-space: -o-pre-wrap;
-             word-wrap: break-word;
-        
-     }
-
-
-    @media (min-width: 320px) and (max-width: 767px) {
-
-        body{
-            font-size: 0.9rem;
-        }
-
-        h1{
-            font-size: 4.8rem;
-        }
-
-
-        a.newPost{
-            width:90vw;
-        }
-
-        .frame{
-            width:90vw;
-            background-color: white;
-            word-wrap: break-word;
-            padding:45px 45px 60px 45px;
-        }
-    
-
-        .frame header{
-            width:100%;
-        }
-
-    .frame section.book_body,
-    .frame section.like{
-            margin-left: 0;
-    }
-        
-    .frame header.book_header{
-        width:100%;
-        display: flex;
-        margin-bottom: 40px;
-        justify-content: space-between;
-    }
-    
-    input.bookTitle{
+    input.bookTitle {
         font-family: karla;
         font-size: 3rem;
         line-height: 1;
-        width:100%;
+        width: 100%;
     }
-
-      
-    }
-
-    
+}
