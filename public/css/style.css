@@ -88,7 +88,7 @@ a.delete {
 
 a.edit {
     position: absolute;
-    right: 100px;
+    right: 107px;
     bottom: 0;
 }
 
@@ -134,15 +134,15 @@ a.edit {
     cursor: pointer;
 }
 
-a.cancel,
+/* a.cancel,
 a.delete {
     background-color: #755e56;
-}
+} */
 
 input[type="submit"] {
     position: absolute;
     padding: 0.8rem 1.5rem;
-    right: 110px;
+    right: 111px;
     bottom: 0;
     cursor: pointer;
 }
@@ -171,12 +171,13 @@ textarea.bookContents {
 }
 
 input.bookTitle {
-    font-family: karla;
+    font-family: "Ramaraja", serif;
     font-size: 4rem;
+    height: 80px;
     line-height: 0.5;
     width: 100%;
     background-color: #eeeeee;
-    padding: 10px;
+    padding: 20px 10px 0 10px;
 }
 
 input.author {
