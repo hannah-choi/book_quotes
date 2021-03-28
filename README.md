@@ -10,6 +10,7 @@ A web app with CRUD feature built with nodeJS (ejs) & MySQL.
 - Create a new post by "Write new post" button on top.
 - Delete or edit post by the 2 buttons of each post.
 - Like / unlike with the heart icon of each post and the status will be saved.
+- Responsive layout
 
 
 ## Wireframe
